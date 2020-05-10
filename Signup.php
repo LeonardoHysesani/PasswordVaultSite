@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+</head>
+<body style="background-color:#ffccff; background-image: url(tech4.jpg);background-repeat: no-repeat;background-position: center;background-size: 100%; background-blend-mode: multiply; background-repeat: repeat-y;">
+<center>
+    <br>
+    <form name="signupform" method="post" action="createAcc.php" style="padding: 10px; border: 10px solid #6699ff; margin-left: 150px; margin-right: 150px; margin-top: 150px; width: 600px; background-color: #ffcc66; border-style: outset;">
+        <h2>Sign Up</h2>
+        <br>
+        Username: <input type="text" name="user" style="margin-right: 90px;">
+        <br>
+        Password:  <input type="password" name="passw" style="margin-right: 85px;">
+        <br>
+        Confirm password: <input type="password" name="confpassw" style="margin-right: 156px">
+        <br>
+        <br>
+        <button type="submit" value="login" style="margin-top: 15px; padding: 10px; border: 1px solid #3333ff; background-color: #0099ff; color: white; text-decoration-line: none; cursor: pointer;">Create your account</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="Login.php" style="margin-top: 300px; padding: 10px; border: 1px solid #3333ff; background-color: #0099ff; color: white; text-decoration-line: none;">Back to login page</a>
+    </center>
+</body>
+</html>
