@@ -15,7 +15,7 @@ if ($username == NULL || $password == NULL) {
 
 setcookie("user", $username, time() + (86400 * 30), "/"); // 86400 = 1 day
 //CHECKING VALIDITY OF DATA
-$result = $conn -> query("SELECT UID FROM testdb WHERE USERNAME = '$username'");
+$result = $conn -> query("SELECT UID FROM UsersTable WHERE BINARY USERNAME = '$username'");
 $row = $result -> fetch_row();
 switch ($row) {
 	case NULL:
@@ -24,7 +24,7 @@ switch ($row) {
 		break;
 
 	case !NULL:
-		$result = $conn -> query("SELECT PASSWORD FROM testdb WHERE PASSWORD = '$password'");
+		$result = $conn -> query("SELECT PASSWORD FROM UsersTable WHERE PASSWORD = '$password'");
 		$row = $result -> fetch_row();
 		if ($row == NULL) {
 			echo "<center><h1 style='color:white'>WRONG PASSWORD</h1><center>";

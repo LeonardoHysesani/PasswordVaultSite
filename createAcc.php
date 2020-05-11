@@ -7,7 +7,7 @@ if (!$conn) {
 }
 
 //GET DATA
-$user = ($_POST['user']);
+$user = (($_POST['user']));
 $passw = ($_POST['passw']);
 $confpassw = ($_POST['confpassw']);
 if ($user == NULL OR $passw == NULL OR $confpassw == NULL) {
@@ -16,7 +16,7 @@ if ($user == NULL OR $passw == NULL OR $confpassw == NULL) {
 }
 
 //CHECKING VALIDITY OF DATA
-$result = $conn -> query("SELECT UID FROM testdb WHERE USERNAME = '$user'");
+$result = $conn -> query("SELECT UID FROM UsersTable WHERE USERNAME = '$user'");
 $row = $result -> fetch_row();
 switch ($row) {
 	case !NULL:
@@ -25,8 +25,8 @@ switch ($row) {
 
 	default:
 		if ($passw == $confpassw) {
-				$conn -> query("INSERT INTO testdb (USERNAME, PASSWORD) VALUES ('$user', '$passw')");
-				if ($conn -> query("CREATE TABLE $user ( TYPE TEXT NULL DEFAULT NULL , USERNAME TEXT NULL DEFAULT NULL , PASSWORD TEXT NULL DEFAULT NULL )") === TRUE) {
+				if ($conn -> query("CREATE TABLE sampledb.$user ( TYPE TEXT NULL DEFAULT NULL , USERNAME TEXT NULL DEFAULT NULL , PASSWORD TEXT NULL DEFAULT NULL , ID INT NOT NULL AUTO_INCREMENT, PRIMARY KEY (ID)) ENGINE = InnoDB") == TRUE) {
+					$conn -> query("INSERT INTO UsersTable (USERNAME, PASSWORD) VALUES ('$user', '$passw')");
 					printf("<h1 style='color:white'>Account created. You can now login.</h1>");
 				}
 				break;

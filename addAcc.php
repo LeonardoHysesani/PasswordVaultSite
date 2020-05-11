@@ -11,14 +11,15 @@ $type = ($_POST['type']);
 $username = ($_POST['username']);
 $password = ($_POST['password']);
 $conn -> query("INSERT INTO $user (TYPE, USERNAME, PASSWORD) VALUES ('$type', '$username', '$password')");
-header("Location: PasswordVault.php");
+header("Location: updateTable.php");
+exit();
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Store new account</title>
+	<title>Storing new account</title>
 </head>
-<body style="background-image:url(tech4.jpg)">
+<body>
 
 </body>
 </html>
