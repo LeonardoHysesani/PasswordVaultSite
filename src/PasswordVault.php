@@ -13,7 +13,7 @@ printf("<div><h1 style='color:white; background-color:black'><div style='font-si
 printf('<center><table><tr><td>
 <div style="background-color:lightblue; width: 300px; border: 5px solid grey;">
 	<h2 style="margin-bottom:-30px">Store new</h2>
-	<form name="newAccForm" style="padding:20px;" action="addAcc.php" method="post">
+	<form name="newAccForm" style="padding:20px;" action="newItem.php" method="post">
 		<h3 style="color:black">Type</h3><input type="text" placeholder="e.g. Facebook, Youtube" name="type">
 		<h3 style="color:black">Username</h3><input type="text" name="username">
 		<h3 style="color:black">Password</h3><input type="text" name="password">
@@ -25,7 +25,7 @@ printf('<center><table><tr><td>
 printf('<td>
 <div style="background-color:#ff5c33; width: 300px; border: 5px solid grey;">
 	<h2 style="margin-bottom:-30px">DELETE</h2>
-	<form name="delAccForm" style="padding:20px;" action="delAcc.php" method="post">
+	<form name="delAccForm" style="padding:20px;" action="delItem.php" method="post">
 		<h3 style="color:black">Specify # of account</h3><input type="text" name="Row">
 		<br>
 		<button type="submit" value="newAcc" style="margin-top: 15px; padding: 10px; border: 1px solid white; background-color: red; color: white; text-decoration-line: none; cursor: pointer;">- DELETE ACCOUNT</button>

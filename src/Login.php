@@ -11,7 +11,7 @@
 	<div class="container-sm">
     <center>
         <br>
-        <form name="loginform" method="post" action="authenticate.php" style="padding: 10px; border: 10px solid #6699ff; margin-left: 150px; margin-right: 150px; margin-top: 150px; width: 600px; border-style: outset; background-color: #ffcc66;">
+        <form name="loginform" method="post" action="auth.php" style="padding: 10px; border: 10px solid #6699ff; margin-left: 150px; margin-right: 150px; margin-top: 150px; width: 600px; border-style: outset; background-color: #ffcc66;">
         	<h2>Log in to your account</h2>
         	<br>
         	<br>
