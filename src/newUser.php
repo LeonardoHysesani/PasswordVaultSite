@@ -35,8 +35,7 @@
 			if ($passw == $confpassw) {
 					if ($conn -> query("CREATE TABLE vault.$user ( TYPE TEXT NULL DEFAULT NULL , USERNAME TEXT NULL DEFAULT NULL , PASSWORD TEXT NULL DEFAULT NULL , ID INT NOT NULL AUTO_INCREMENT, PRIMARY KEY (ID)) ENGINE = InnoDB") == TRUE) {
 						$conn -> query("INSERT INTO UsersTable (USERNAME, PASSWORD_HASH) VALUES ('$user', '$passw')");
-						printf('<h1 style="color:white">Account created. You can now login.</h1>
-						<center>
+						printf('<center><h1 style="color:white">Account created. You can now login.</h1>
 							<br>
 							<br>
 							<br>
@@ -71,7 +70,7 @@
  <!DOCTYPE html>
  <html>
  <head>
- 	<title>Account creation</title>
+ 	<title>Account creation status</title>
  </head>
  <body style="background-color: #ffccff; background-image: url(/img/tech4.jpg);background-repeat: no-repeat;background-size: 100%; background-blend-mode: multiply; background-repeat: repeat-y;">
  	
