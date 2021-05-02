@@ -1,5 +1,5 @@
 <?php
-    header('Location: Login.html');
+    header('Location: /src/Login.html');
     exit();
 ?>
 <!DOCTYPE html>
