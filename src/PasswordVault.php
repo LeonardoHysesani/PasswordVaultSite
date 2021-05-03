@@ -5,13 +5,24 @@
 	//Extending cookie lifetime by 1 hour
 	setcookie("curr_user", $username, time() + 3600, "/");
 	
-	printf('<p style="color:white;">Logged in as %s</p>
-			<form action="logout.php" name="logoutForm" method="post">
+	echo('
+	<div id="top" style="width: 99%; padding: 10px; background-color: black; margin: -10px; color: white; top: 0; position: fixed;s">
+		<table class="top" style="width: 100%;border-spacing: unset;">
+			<td style="border: unset; color:white; padding : unset; height: unset;">
+				<h2 style="text-align: left;">Password Vault</h2>
+			</td>
+			<td style="text-align: right;border: unset; padding : unset;height: unset;">');
+		printf('<p style="color:white;">Logged in as %s</p>', $username);
+	  echo('<form action="logout.php" name="logoutForm" method="post" style="margin-right: 10px;">
 				<button style="border: 1px solid white; background-color: red; color: white; text-decoration-line: none; cursor: pointer;">Log out</button>
 			</form>
-			', $username);
+			</td>
+		</table>
+	</div>
+	');
 	
-	printf('<center><table><tr><td>
+	printf('<br><br><br><br>
+	<center><table><tr><td>
 	<div style="background-color:lightblue; width: 300px; border: 5px solid grey;">
 		<form name="newAccForm" style="padding:20px;" action="newItem.php" method="post">
 			<h3 style="color:black">Type</h3><input type="text" placeholder="e.g. Facebook, Youtube" name="type">
