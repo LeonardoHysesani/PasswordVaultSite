@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" href="/img/lock.png">
         <title>Welcome to The Vault</title>
     </head>
     <body style="background-image: url(img/tech4.jpg);">

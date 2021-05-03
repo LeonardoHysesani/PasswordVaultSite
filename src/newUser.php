@@ -70,6 +70,7 @@
  <!DOCTYPE html>
  <html>
  <head>
+ 	<link rel="icon" href="/img/lock.png">
  	<title>Account creation status</title>
  </head>
  <body style="background-color: #ffccff; background-image: url(/img/tech4.jpg);background-repeat: no-repeat;background-size: 100%; background-blend-mode: multiply; background-repeat: repeat-y;">

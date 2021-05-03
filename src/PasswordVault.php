@@ -78,6 +78,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="icon" href="/img/lock.png">
 	<title>Your Vault</title>
 	<style type="text/css">
 		table{
@@ -93,7 +94,7 @@
 
 	</style>
 </head>
-<body style="background-image:url(/img/tech4.jpg);background-attachment: fixed;">
+<body style="background-image:url(/img/tech4.jpg);background-color: black;background-attachment: fixed;">
 
 </body>
 </html>

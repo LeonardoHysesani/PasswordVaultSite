@@ -13,6 +13,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" href="/img/lock.png">
 	<title>Deleting</title>
 </head>
 <body>

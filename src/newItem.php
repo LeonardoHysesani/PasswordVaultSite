@@ -12,6 +12,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" href="/img/lock.png">
 	<title>Storing new account</title>
 </head>
 <body>
