@@ -14,16 +14,16 @@
 	$row = $result -> fetch_row();
 	switch ($row) {
 		case NULL:
-			echo("<center><h1 style='color:white'>USERNAME IS NOT REGISTERED</h1><center>");
 			setcookie("curr_user", "", time() - 3600);
+			echo("<center><h1 style='color:white'>USERNAME IS NOT REGISTERED</h1><center>");
 			break;
 
 		case !NULL:
 			$result = $conn -> query("SELECT PASSWORD_HASH FROM UsersTable WHERE PASSWORD_HASH = '$password'");
 			$row = $result -> fetch_row();
 			if ($row == NULL) {
-				echo "<center><h1 style='color:white'>WRONG PASSWORD</h1><center>";
 				setcookie("curr_user", "", time() - 3600);
+				echo "<center><h1 style='color:white'>WRONG PASSWORD</h1><center>";
 			}
 			else{
 				header('Location: PasswordVault.php');
@@ -35,6 +35,7 @@
 <!DOCTYPE html>
  <html>
  <head>
+ 	<link rel="icon" href="/img/lock.png">
  	<title>Authentication status</title>
  </head>
  <body style="background-color: #ffccff; background-image: url(/img/tech4.jpg);background-repeat: no-repeat;background-size: 100%; background-blend-mode: multiply; background-repeat: repeat-y;">
