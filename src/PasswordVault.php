@@ -2,6 +2,7 @@
 	require('dbconnect.php');
 
 	$username = $_COOKIE['curr_user'];
+	$tablename = 'user_'.$username;
 	//Extending cookie lifetime by 1 hour
 	setcookie("curr_user", $username, time() + 3600, "/");
 	
@@ -47,7 +48,7 @@
 	*/
 
 	//showing table
-	if ($result = $conn -> query("SELECT * FROM $username")) {
+	if ($result = $conn -> query("SELECT * FROM $tablename")) {
 		printf("<table border='2' style='background-color:#8080ff;color:white; width: 900px; max: width 900px; border-collapse: collapse;'><tr style='color:black; background-color:green;'>");
 		printf("<td>ACCOUNT</td>");
 		printf ("<td>USERNAME</td>");

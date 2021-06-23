@@ -1,9 +1,10 @@
 <?php
     require('dbconnect.php');
     $user = $_COOKIE['curr_user'];
+    $tablename = 'user_'.$user;
     $accRow = ($_POST['Row']);
 
-    $conn -> query("DELETE FROM $user WHERE ID=$accRow");
+    $conn -> query("DELETE FROM $tablename WHERE ID=$accRow");
     header('Location: updateTable.php');
     exit();
 

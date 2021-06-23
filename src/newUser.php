@@ -33,7 +33,7 @@
 
 		default:
 			if ($passw == $confpassw) {
-					if ($conn -> query("CREATE TABLE $db_name.$user ( TYPE TEXT NULL DEFAULT NULL , USERNAME TEXT NULL DEFAULT NULL , PASSWORD TEXT NULL DEFAULT NULL , ID INT NOT NULL AUTO_INCREMENT, PRIMARY KEY (ID)) ENGINE = InnoDB") == TRUE) {
+					if ($conn -> query("CREATE TABLE $db_name.'user_'.$user ( TYPE TEXT NULL DEFAULT NULL , USERNAME TEXT NULL DEFAULT NULL , PASSWORD TEXT NULL DEFAULT NULL , ID INT NOT NULL AUTO_INCREMENT, PRIMARY KEY (ID)) ENGINE = InnoDB") == TRUE) {
 						$conn -> query("INSERT INTO UsersTable (USERNAME, PASSWORD_HASH) VALUES ('$user', '$passw')");
 						printf('<center><h1 style="color:white">Account created. You can now login.</h1>
 							<br>
