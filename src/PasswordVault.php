@@ -1,6 +1,10 @@
 <?php
 	require('dbconnect.php');
 
+	if (!$_COOKIE['curr_user']) {
+		header('Location: https://www.passwordvault049.webhostapp.com/src/Login.html')
+	}
+
 	$username = $_COOKIE['curr_user'];
 	$tablename = 'user_'.$username;
 	//Extending cookie lifetime by 1 hour
