@@ -2,7 +2,7 @@
 	require('dbconnect.php');
 
 	if (!$_COOKIE['curr_user']) {
-		header('Location: https://www.passwordvault049.webhostapp.com/src/Login.html')
+		header('Location: https://www.passwordvault049.webhostapp.com/src/Login.html');
 	}
 
 	$username = $_COOKIE['curr_user'];
